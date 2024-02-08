@@ -1,0 +1,386 @@
+/*
+    Copyright (c) 2023 xquadz0@gmail.com
+    All rights reserved.
+    See LICENSE.txt for license information.
+    littlechemistry.online/LICENSE.txt
+*/
+
+body {
+    background-color: #282a2e;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.stardust-image {
+    left: 0px;
+    top: 300px;
+    position: fixed;
+    background-image: url("images/stardust.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin: 5px;
+}
+
+.stardust-divider {
+    position: fixed;
+    left: 60px;
+    top: 300px;
+    color: #eee;
+    background-color: #eee;
+    font-size:24px;
+    height: 50px;
+    width: 2px;
+    margin: 5px;
+}
+.stardust-counter {
+    position: fixed;
+    left: 75px;
+    top: 316px;
+    color: #eee;
+    background-color: transparent;
+    font-size: 24px;
+    height: 24px;
+    width: auto;
+    color: #ba5998;
+}
+
+.objective-holder {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #2e3136;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 250px;
+    height: 300px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.objective-title {
+    position: absolute;
+    top: 284px;
+    left: 0px;
+    font-size: 16px;
+    color: white;
+    background-color: #2e3136;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+.objective {
+    display: flex;
+    flex-direction: column; /* Changed from column to row */
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #2e3136;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    user-select: none;
+    height: auto; /* Increased height */
+}
+
+.objective-objective-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    user-select: none;
+    width: 97%; 
+    height: auto; 
+    padding: 5px;
+    cursor: pointer;
+}
+.stardust-inner-image {
+    position: relative;
+    bottom: 0;
+    left: 50px;
+    border-radius: 5px;
+    width: 22px; /* Increased width */
+    height: 22px; /* Increased height */
+    background-image: url("images/stardust.png");
+    background-size: cover;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.objective-objective-title:hover {
+    background-color: #eee;
+}
+
+.objective-text {
+    background-color: transparent;
+    border-radius: 5px;
+    user-select: none;
+    width: 95%;
+    height: 0px;
+    display: none;
+    text-align: justify;
+    color: #eee;
+    font-size: 16px;
+    padding: 3px;
+}
+
+.blue-text {
+    color: #717ce3;
+}
+.purple-text {
+    color: #ba5998;
+}
+.yellow-text {
+    color: #fff200;
+}
+.green-text {
+    color: #22b14d;
+}
+.red-text {
+    color: #ed1c24;
+}
+
+.folder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    top: 0; /* Position at the top of the page */
+    right: 250px; /* Push it to the left of the sidebar */
+    background-color: #373b41;
+    transition: background-color 0.3s;
+    padding: 5px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: #1c1c1e;
+    z-index: 1; /* Ensure it's above the dropdown content */
+}
+
+.folder-tab {
+    position: fixed;
+    top: 25px;
+    right: 250px;
+    background-color: #2e3136;
+    padding: 10px;
+    width: 175px;
+    height: 275px;
+    box-sizing: border-box;
+    display: none;
+    overflow-y: auto;
+}
+
+.folder-title {
+    position: fixed;
+    border-bottom-left-radius: 5px;
+    top: 0px;
+    right: 250px;
+    text-align: center;
+    background-color: #373b41;
+    padding: 5px;
+    width: 180px;
+    height: auto;
+    box-sizing: border-box;
+    color: #eee;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.add-folder {
+    position: fixed;
+    top: 300px;
+    right: 395px;
+    background-image: url("images/add_folder.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    display: none;
+}
+
+.rm-folder {
+    position: fixed;
+    top: 300px;
+    right: 360px;
+    background-image: url("images/remove_folder.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    display: none;
+}
+
+.folder-bar {
+    position: fixed;
+    top: 300px;
+    right: 250px;
+    background-color: #ccc;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    font-size: 14px;
+    width: 105px;
+    height: 30px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.search-bar::placeholder {
+    color: #2a2a2a;
+}
+
+.scrollable-div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 97%;
+    overflow-y: auto;
+    background-color: #373b41;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.element-container {
+    display: flex;
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #2e3136;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    user-select: none;
+    height: 60px; /* Increased height */
+}
+
+
+.element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    user-select: none;
+    width: 75%; 
+    height: 50px; 
+    text-align: center;
+}
+
+.element-image {
+    border-radius: 5px;
+    width: 50px; /* Increased width */
+    height: 50px; /* Increased height */
+    background-size: cover;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.trash-icon {
+    border-radius: 5px;
+    width: 50px; /* Increased width */
+    height: 50px; /* Increased height */
+    background-size: cover;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.trash-icon-holder {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #373b41;
+    transition: background-color 0.3s;
+}
+
+.element-container:hover {
+    background-color: #6d3f5b
+}
+
+.recycle-btn {
+    position: fixed;
+    bottom: -5px;
+    right: 260px;
+    background-image: url("images/recycle.png");
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.discord-btn {
+	position: fixed;
+	bottom: 50px;
+	left: 5px;
+	background-image: url("images/discord.png");
+	background-size: cover;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+
+
+.search-bar {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    background-color: #ccc;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 250px;
+    box-sizing: border-box;
+}
+
+.search-bar::placeholder {
+    color: #2a2a2a;
+}
+
+
+.reset-btn {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    background-color: #832929; /* Pastel red color */
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+}

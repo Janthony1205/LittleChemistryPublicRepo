@@ -1,0 +1,29 @@
+Copyright (c) 2023 xquadz0@gmail.com
+
+All rights reserved.
+
+The following terms apply to the software and associated documentation files (the "Software") identified above:
+
+    USAGE: Individuals are granted permission to view and learn from the Software solely for personal, non-commercial purposes. The use of the Software,
+    or any part thereof, for any other purpose, including but not limited to the reproduction, modification, distribution, transmission, republication,
+    display, or performance, of the content of the Software is strictly prohibited without the explicit written permission of the copyright holder.
+
+    OWNERSHIP: The Software is protected by copyright law and international treaty provisions and is the property of the copyright holder.
+
+    NO WARRANTIES: The Software is provided "as is" without warranty of any kind, either expressed or implied, including, but not limited to, warranties
+    of merchantability, fitness for a particular purpose, or non-infringement.
+
+    LIMITATION OF LIABILITY: In no event shall the copyright holder be liable for any claim, damages or other liability, whether in an action of contract,
+    tort or otherwise, arising from, out of, or in connection with the Software or the use or other dealings in the Software.
+
+    TERMINATION: Any use of the Software not in accordance with the license provisions will terminate this license immediately. In the event of termination,
+    the user will be notified via the email address provided at the time of the Software's acquisition or use.
+
+    REVOCATION: This license may be revoked by the copyright holder at any time under circumstances deemed appropriate by the copyright holder. Users will be
+    notified of such revocation via the email address provided at the time of the Software's acquisition or use.
+
+    GOVERNING LAW: This license shall be governed by and construed in accordance with the laws of Panama, without regard to its conflict of laws rules. Any
+    legal action or proceeding arising under this license will be brought exclusively in the courts located in Panama, and the parties consent to personal
+    jurisdiction and venue therein.
+
+Any use of the Software not in accordance with the license provisions is strictly prohibited and will terminate this license immediately.
